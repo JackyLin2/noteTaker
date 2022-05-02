@@ -8,7 +8,6 @@ function Home({ isAuth }) {
 
   const deletePost = async (id) => {
     const postDoc = doc(db, "posts", id);
-    console.log(postDoc)
     await deleteDoc(postDoc);
   };
 
@@ -20,6 +19,7 @@ function Home({ isAuth }) {
 
     getPosts();
   }, [deletePost]);
+
 
   return (
     <div className="homePage">
